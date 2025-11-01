@@ -19,6 +19,11 @@
             "Mayakhan719\\FilamentAudioColumn\\": "src/"
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mayakhan719\\FilamentAudioColumn\\FilamentAudioColumnServiceProvider"
+            ]
+        }
+    }
 }

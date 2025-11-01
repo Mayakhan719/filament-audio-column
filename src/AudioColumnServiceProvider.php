@@ -2,15 +2,12 @@
 
 namespace Mayakhan719\FilamentAudioColumn;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class FilamentAudioColumnServiceProvider extends PackageServiceProvider
+class FilamentAudioColumnServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot(): void
     {
-        $package
-            ->name('filament-audio-column')
-            ->hasViews();
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'mayakhan719');
     }
 }

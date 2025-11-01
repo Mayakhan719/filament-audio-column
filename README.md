@@ -34,23 +34,15 @@ public static function table(Table $table): Table
     return $table
         ->columns([
             AudioColumn::make('audio')
-                ->label('Podcast Episode') // Set a custom label
-                ->autoplay() // Autoplay the audio
-                ->controls(false) // Hide controls
-                // ->loop() // Loop the audio
-                // ->width('200px') // Set a custom width
-                // ->height('50px') // Set a custom height
-                ->extraAttributes([ // Add extra attributes to the audio tag
-                    'class' => 'custom-class',
-                    'data-foo' => 'bar',
-                ]),
+                ->label('Podcast Episode')
+                ->native(true) // ->native(false) use Player.style Audio Player
         ]);
 }
 ```
 
 ## Screenshots
 
-![Screenshot of the audio column](https://raw.githubusercontent.com/pxlrbt/filament-audio-column/main/screenshot.png)
+![Screenshot of the audio column](https://raw.githubusercontent.com/Mayakhan719/filament-audio-column/main/pic/screenshot.png)
 
 ## Contributing
 

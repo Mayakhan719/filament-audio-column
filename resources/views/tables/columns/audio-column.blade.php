@@ -1,14 +1,41 @@
-@php
-    $audioUrl = $getState();
-@endphp
-
-<div {{ $getExtraAttributeBag() }} class="flex items-center justify-center">
-    @if ($audioUrl)
-        <audio controls class="w-40">
-            <source src="{{ asset('storage/'. $audioUrl) }}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+<div
+    x-data
+    x-init="
+        // Prevent clicks inside the audio player from triggering Filament row actions
+        $el.querySelectorAll('audio, media-theme-tailwind-audio').forEach(player => {
+            ['click', 'mousedown', 'mouseup', 'dblclick', 'pointerdown'].forEach(evt => {
+                player.addEventListener(evt, e => {
+                    e.stopImmediatePropagation();
+                    e.stopPropagation();
+                    e.preventDefault();
+                });
+            });
+        });
+    "
+    wire:ignore
+>
+    @if ($getIsNative())
+        {{-- Native HTML5 Audio Player --}}
+        <audio
+            src="{{ asset('storage/' . $getState()) }}"
+            controls
+            @if ($getIsLoop()) loop @endif
+        ></audio>
     @else
-        <span class="text-gray-400 italic">No audio</span>
+        {{-- Tailwind Audio Player --}}
+        @once
+            <script type="module" src="https://cdn.jsdelivr.net/npm/player.style/tailwind-audio/+esm"></script>
+        @endonce
+
+        <media-theme-tailwind-audio>
+            <audio
+                slot="media"
+                src="{{ asset('storage/' . $getState()) }}"
+                playsinline
+                crossorigin="anonymous"
+                controls
+                @if ($getIsLoop()) loop @endif
+            ></audio>
+        </media-theme-tailwind-audio>
     @endif
 </div>

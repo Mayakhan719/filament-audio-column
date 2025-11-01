@@ -1,0 +1,22 @@
+{
+    "name": "maya/filament-audio-column",
+    "description": "A Filament plugin that provides an AudioColumn for playing audio files in tables.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maya\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Shoaib",
+            "email": "mshoaib22757@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "filament/filament": "~4.0"
+    }
+}

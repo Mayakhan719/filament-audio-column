@@ -3,11 +3,6 @@
     "description": "A Filament plugin that provides an AudioColumn for playing audio files in tables.",
     "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Mayakhan719\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Muhammad Shoaib",
@@ -16,7 +11,14 @@
     ],
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.0",
-        "filament/filament": "~4.0"
-    }
+        "laravel/framework": "^12.0",
+        "filament/filament": "^3.2|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mayakhan719\\FilamentAudioColumn\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

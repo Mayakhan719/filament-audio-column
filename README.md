@@ -27,7 +27,7 @@ public static function table(Table $table): Table
 You can also customize the column:
 
 ```php
-use Mayakhan719\Tables\Columns\AudioColumn;
+use Maya\Tables\Columns\AudioColumn;
 
 public static function table(Table $table): Table
 {
@@ -37,9 +37,9 @@ public static function table(Table $table): Table
                 ->label('Podcast Episode') // Set a custom label
                 ->autoplay() // Autoplay the audio
                 ->controls(false) // Hide controls
-                ->loop() // Loop the audio
-                ->width('200px') // Set a custom width
-                ->height('50px') // Set a custom height
+                // ->loop() // Loop the audio
+                // ->width('200px') // Set a custom width
+                // ->height('50px') // Set a custom height
                 ->extraAttributes([ // Add extra attributes to the audio tag
                     'class' => 'custom-class',
                     'data-foo' => 'bar',

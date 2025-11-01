@@ -1,11 +1,11 @@
 {
-    "name": "maya/filament-audio-column",
+    "name": "mayakhan719/filament-audio-column",
     "description": "A Filament plugin that provides an AudioColumn for playing audio files in tables.",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Maya\\": "src/"
+            "Mayakhan719\\": "src/"
         }
     },
     "authors": [

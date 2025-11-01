@@ -1,10 +1,10 @@
 <?php
 
-namespace Maya\Tables\Columns;
+namespace Mayakhan719\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
 
 class AudioColumn extends Column
 {
-    protected string $view = 'maya-audio-column::tables.columns.audio-column';
+    protected string $view = 'mayakhan719::tables.columns.audio-column';
 }

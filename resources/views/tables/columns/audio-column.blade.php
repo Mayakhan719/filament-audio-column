@@ -5,7 +5,7 @@
 <div {{ $getExtraAttributeBag() }} class="flex items-center justify-center">
     @if ($audioUrl)
         <audio controls class="w-40">
-            <source src="{{ Storage::url($audioUrl) }}" type="audio/mpeg">
+            <source src="{{ asset('storage/'. $audioUrl) }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     @else

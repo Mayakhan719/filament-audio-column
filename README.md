@@ -35,7 +35,8 @@ public static function table(Table $table): Table
         ->columns([
             AudioColumn::make('audio')
                 ->label('Podcast Episode')
-                ->native(true) // ->native(false) use Player.style Audio Player
+                ->native(true) // ->native(false) use Player.style Audio Player 
+                
         ]);
 }
 ```

@@ -7,13 +7,13 @@ A Filament Table Column for playing audio files.
 You can install the package via composer:
 
 ```bash
-composer require maya/filament-audio-column
+composer require mayakhan719/filament-audio-column
 ```
 
 ## Usage
 
 ```php
-use Maya\Tables\Columns\AudioColumn;
+use Mayakhan719\Tables\Columns\AudioColumn;
 
 public static function table(Table $table): Table
 {
@@ -27,7 +27,7 @@ public static function table(Table $table): Table
 You can also customize the column:
 
 ```php
-use Maya\Tables\Columns\AudioColumn;
+use Mayakhan719\Tables\Columns\AudioColumn;
 
 public static function table(Table $table): Table
 {
